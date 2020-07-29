@@ -1,20 +1,19 @@
 //Task 1:Run node as a web server for hosting static files
 
 var express= require('express');
-
 var app = express();
 
-let accounts= [
-{a:1, name:'Peter',deposit:5},
-{a:2, name:'George',deposit:15},
-{a:3, name:'Steve',deposit:50}
+let accounts=[
+{a:1, name:'Peter', deposit:5},
+{a:2, name:'George', deposit:15},
+{a:3, name:'Steve', deposit:50}
 
 ]
  app.get(function(req,res)
  {
 
-    res.send('accounts');
-    res.write('accounts');
+    res.send(accounts);
+    
  }
  )
  app.listen(4000);
